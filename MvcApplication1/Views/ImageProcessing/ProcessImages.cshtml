@@ -1,0 +1,50 @@
+﻿@model CoursesTests.Models.ImageProcessionDataViewModel
+@{
+    ViewBag.Title = "ProcessImages";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    div.col-md-4 {
+        display:inline-block;
+        margin-right:25px;
+    }
+
+        div.col-md-4 p {
+        padding-left:150px;
+        font-weight:bold;
+        }
+</style>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+        @using (Html.BeginForm("Submit", "ImageProcessing", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+
+
+            <input type="file" name="file" />
+            <p>
+                <input type="submit" value="Add picture" class="k-button" />
+            </p>
+
+
+
+        }
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <p>Избраната снимка</p>
+        <img width="370" height="370" src="@Model.SelectedPictureName" alt="selected-picture" /><br />
+    </div>
+    <div class="col-md-4">
+        <p>Сива скала</p>
+        <img width="370" height="370" src="@Model.GrayStylePictureName" alt="gray-style-picture" /><br />
+    </div>
+
+    <div class="col-md-4">
+        <p>Хистограма</p>
+        <img width="370" height="370" src="@Model.HistogramName" alt="historgram" /><br />
+    </div>
+
+</div>

@@ -1,0 +1,4 @@
+----- text print--->144 Calculate covariance  ColumnCount-------
+----- text print--->144 Calculate covariance  RowCount-------
+----- text print--->Percenatge Error 93% Mistake-------
+----- text print--->Max lambda index 143-------
